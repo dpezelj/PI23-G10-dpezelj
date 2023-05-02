@@ -24,5 +24,11 @@ namespace EvaluationManagerG10
         private void txtUsername1_Load(object sender, EventArgs e) {
 
         }
+
+        private void btnLogin_Click(object sender, EventArgs e) {
+            if (txtUsername.Text == "") {
+                MessageBox.Show("Korisnicko ime nije unseno!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
