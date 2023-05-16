@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EvaluationManagerG10.Models;
+using EvaluationManagerG10.Repositories;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,9 @@ namespace EvaluationManagerG10
 {
     public partial class frmLogin : Form
     {
+
+        public static Teacher LoggedTeacher { get; set; }
+
         public frmLogin()
         {
             InitializeComponent();
@@ -29,6 +34,20 @@ namespace EvaluationManagerG10
             if (txtUsername.Text == "") {
                 MessageBox.Show("Korisnicko ime nije unseno!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            if (txtPassword.Text == "") {
+                MessageBox.Show("Password nije unsen!", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            LoggedTeacher = TeacherRepository.GetTeacher(txtUsername.Text);
+            if (LoggedTeacher != null && LoggedTeacher.CheckPassword(txtPassword.Text)) {
+                FrmStudents frmStudents = new FrmStudents();
+                Hide();
+                frmStudents.ShowDialog();
+                Close();
+            } else {
+                MessageBox.Show("Krivi podaci", "Problem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

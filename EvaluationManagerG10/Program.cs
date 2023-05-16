@@ -16,7 +16,7 @@ namespace EvaluationManagerG10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            DBLayer.DB.SetConfiguration("Evolutionmanager", "test", "test");
+            //DBLayer.DB.SetConfiguration("Evolutionmanager", "nastavnik", "test");
             Application.Run(new frmLogin());
         }
     }
