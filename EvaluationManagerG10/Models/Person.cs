@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace EvaluationManagerG10.Models {
     public abstract class Person  : Object {
         public int Id { get; set; }
-        public string First_Name { get; set; }
-        public string Last_Name { get; set;}
+        public string FirstName { get; set; }
+        public string LastName { get; set;}
         public override string ToString() {
-            return First_Name + " " + Last_Name;
+            return FirstName + " " + LastName;
         }
     } //public abstract class Person
 }

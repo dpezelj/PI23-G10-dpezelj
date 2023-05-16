@@ -44,8 +44,8 @@ namespace EvaluationManagerG10.Repositories {
 
             var teacher = new Teacher {
                 Id = id,
-                First_Name = firstName,
-                Last_Name = lastName,
+                FirstName = firstName,
+                LastName = lastName,
                 Username = username,
                 Password = password
             };

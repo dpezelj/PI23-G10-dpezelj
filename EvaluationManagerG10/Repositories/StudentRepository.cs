@@ -56,8 +56,8 @@ namespace EvaluationManagerG10.Repositories {
 
             var student = new Student {
                 Id = id,
-                First_Name = firstName,
-                Last_Name = lastName,
+                FirstName = firstName,
+                LastName = lastName,
                 Grade = grade
             };
 
