@@ -40,5 +40,10 @@ namespace EvaluationManagerG10 {
                 frmEvaluation.ShowDialog();
             }
         }
+
+        private void btnGenerateEvaluationReport_Click(object sender, EventArgs e) {
+            var frmFinal = new FrmFinalReport();
+            frmFinal.ShowDialog();
+        }
     }
 }
